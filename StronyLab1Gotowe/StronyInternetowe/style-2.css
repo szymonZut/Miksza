@@ -1,0 +1,290 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+  background-image: url('resources/new-zealand-4851884_1920.jpg');
+  background-size: cover;
+  color: #1a1a1a;
+}
+
+#main-header {
+  background: rgba(255, 255, 255, 1);
+  backdrop-filter: blur(8px);
+  border-bottom: 2px solid #2e8b57;
+  width: 100%;
+  height: 10%;
+  color: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  font-size: 24px;
+  font-weight: 700;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+#main-header p {
+  background-color: rgba(46, 139, 87, 0.15);
+  color: #1a1a1a;
+  padding: 6px 14px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+#main-header p:hover {
+  background-color: rgba(46, 139, 87, 0.35);
+  transform: scale(1.05);
+}
+
+#logo-header {
+  width: 100px;
+  border-radius: 50%;
+  border: 15px solid rgba(255, 255, 255, 1);
+  margin-top: 40px;
+}
+#content{
+    padding: 0px;
+    width: 100%;
+    height: 20%;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+#main-content {
+  display: flex;
+  gap: 20px;
+  height: 60%;
+}
+
+#left-content {
+  width: 50%;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  margin-left: 10px;
+}
+
+#right-content {
+  width: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-right: 10px;
+}
+
+h1 {
+  font-size: 70px;
+  color: #e5fde5;
+  margin: 20px;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.15);
+}
+h2 {
+  color: #489c5d;
+  padding-left: 15px;
+  background-color: rgba(46, 139, 87, 0.15);
+  border-radius: 6px;                        
+  padding: 8px 12px;                      
+  display: inline-block; 
+}
+#h2-modified{
+    font-size: 30px;
+    margin-top: -17px;
+    color: rgb(228, 228, 228);
+    font-weight: 700;
+    font-family: 'Open Sans';
+}
+#content-top{
+    text-align: center;
+}
+h3 {
+  color: #2e8b57;
+  margin-left: 15px;
+}
+p {
+  font-size: 18px;
+  line-height: 0.8;
+  color: #333;
+  margin-left: 10px;
+}
+ul{
+  list-style-type: square;
+  color: #1baa27;
+  font-weight: 700;
+  text-align: left;
+  width: 50%;
+}
+ul li:nth-child(2),
+ul li:nth-child(4) {
+  background-color: rgba(118, 204, 157, 0.3); 
+  padding: 2px 5px; 
+  border-radius: 6px;
+}
+#img-box {
+  display:contents;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+#imgAnim1, #imgAnim2 {
+  width: 230px;
+  border-radius: 10px;
+  border: 3px solid #2e8b57;
+  box-shadow: 0 0 15px rgba(46, 139, 87, 0.3);
+  transition: transform 0.3s ease;
+}
+#imgAnim1:hover, #imgAnim2:hover {
+  transform: scale(1.05);
+}
+#corner-img, #corner-img2 {
+  position: fixed;
+  top: 0;
+  width: 400px;
+  opacity: 0.8;
+  pointer-events: none;
+}
+#corner-img {
+  left: 0;
+  transform: scaleY(-1) 
+}
+#corner-img2 {
+  right: 0;
+  transform: scaleY(-1) scaleX(-1);
+}
+#foot {
+  background: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(6px);
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  border-top: 2px solid #2e8b57;
+  font-size: 22px;
+  font-weight: 700;
+  color: #205232;
+}
+#social-box {
+  display: flex;
+  gap: 15px;
+}
+#icon-pop {
+  width: 30px;
+  filter: hue-rotate(90deg) brightness(1.3);
+  transition: transform 0.3s;
+}
+#icon-pop:hover {
+  transform: scale(1.2);
+}
+
+/* ---------------------- mobilki ---------------------- */ 
+@media only screen and (max-width: 375px) {
+    html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-image:  linear-gradient(to top, rgba(0, 0, 0, 0.0), rgba(255, 255, 255, 0)), url('resources/new-zealand-4851884_1920.jpg');
+    background-position: left -440px;
+    color: #1a1a1a;
+    background-color: #145c2e; 
+    background-repeat: no-repeat;      
+    background-position: top left;      
+    background-size: auto;       
+  }
+  #logo-header {
+    display: none;
+  }
+
+  #main-header {
+    flex-wrap: wrap;
+    height: auto;
+    gap: 20px;
+  }
+
+  #main-header p {
+    width: 40%; 
+    text-align: center;
+  }
+  #content{
+    padding: 0px;
+    width: 100%;
+    height: auto;
+    color: white;
+    display: flex;
+    justify-content: center;
+  }
+  #main-content {
+    flex-direction: column; 
+    gap: 25px;
+    height: auto;
+    justify-content: center;
+  }
+
+  #left-content, #right-content {
+    width: 95%; 
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+  }
+
+  h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  h2 {
+    font-size: 22px;
+    margin: 0px;
+  }
+  #h2-modified{
+    font-size: 30px;
+    margin-top: -17px;
+    color: rgb(38, 112, 48);
+    font-weight: 700;
+    font-family: 'Open Sans';
+    margin-bottom: 20px;
+   }
+  #line-1{
+    display: none;
+  }
+  #line-2{
+    display: none;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  p, ul {
+    font-size: 16px;
+    margin: 10px;
+    line-height: 20px;
+  }
+  #img-box {
+    flex-direction: column; 
+    gap: 10px;
+    margin: auto;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  #corner-img, #corner-img2 {
+    width: 0px; 
+  }
+  #foot {
+    font-size: 10px;
+    color:#ffffff;
+    font-size: 15px;
+    text-align: center;
+    font-weight: 500;
+    gap: 10px;
+    border: none;
+  }
+  #footer-box{
+    margin: auto;
+  }
+  #social-box {
+    margin-top: 5px;
+  }
+}
