@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <template id="szablon">
+    <div class="element-listy">
+        <input type="checkbox" class="checkbox">
+        <p class="name">Task Name</p> 
+        <p class="date"></p>
+        <img class="bin-icon" src="resources/delete_40dp_FFFFFF_FILL0_wght400_GRAD0_opsz40.png">
+    </div>
+    </template>
+    
+    <div id="content">
+        <div id="search-div">
+            <img id="search-icon" src="resources/search_40dp_FFFFFF_FILL0_wght400_GRAD0_opsz40.png">
+            <input type="text" id="search-Input" placeholder="Search..." autocomplete="off">
+        </div>
+        <div id="lista">
+
+        </div>
+
+        <div id="newTask-box">
+            <p class="newTask-box-text">New Task </p>
+            <input type="text" id="_taskName" placeholder="Task name..." autocomplete="off">
+            <p class="newTask-box-text">Task Date</p>
+            <input type="date" id="_taskDate" placeholder="Task date..." autocomplete="off">
+            <button type="button" id="task-Add-Button" onclick="addTask()">Add Task</button>
+        </div>
+    </div>  
+    <script src="skrypt.js"></script>   
+</body>
+</html>
