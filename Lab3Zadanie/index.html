@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leaflet Map Puzzle Drag & Drop</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+
+        #container { display: flex; gap: 20px; padding: 10px; }
+
+        #map { width: 800px; height: 500px; border: 1px solid black; }
+
+        #puzzle-area {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            width: 1000px;
+            height: 500px;
+        }
+
+        .drag-target {
+            border: 1px dashed #0d0d2c;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        .tile {
+            cursor: grab;
+            box-sizing: border-box;
+            flex: 1 0 80px;  
+            height: 100%;
+            width: 100%;
+        }
+
+        button { margin: 10px; }
+
+        #rasterMap { display: none; }
+
+            #tile-container {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-auto-rows: auto;               
+            gap: 5px;
+            width: 100%;
+            padding: 10px 0;
+            background: #f0f0f0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <button id="getLocation">Get Current Location</button>
+    <button id="createPuzzle">Create Puzzle</button>
+
+    <div id="container">
+        <div id="map"></div>
+        <div id="puzzle-area"></div>
+    </div>
+
+    <div id="tile-container"></div>
+
+    <canvas id="rasterMap" width="300" height="150"></canvas>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-providers/leaflet-providers.js"></script>
+    <script src="https://unpkg.com/leaflet-image/leaflet-image.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
