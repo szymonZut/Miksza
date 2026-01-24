@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pogoda</title>
+</head>
+<body>
+
+    <div class="top-container">
+        <div class="form">
+            <input type="text" id="name" autocomplete="off" required placeholder="Wyszukaj miasto..."/>
+
+        </div>
+
+        <button id="pogodaBtn" class="styled-btn">Pobierz pogodę</button>
+    </div>
+
+    <div id="current-weather" class="current-weather"></div>
+
+    <div id="content-box">  
+        <div class="holder"></div>
+        <div class="holder"></div>
+        <div class="holder"></div>
+        <div class="holder"></div>
+        <div class="holder"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

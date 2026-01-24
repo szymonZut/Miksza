@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #abc3e4;
+}
+
+.top-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 25px 0;
+    background: #d0ddef;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+}
+
+.form {
+    position: relative;
+}
+
+.form input {
+    padding: 12px 16px;
+    font-size: 16px;
+    width: 220px;
+    border: 2px solid #aaa;
+    border-radius: 6px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form input:focus {
+    border-color: #58b8f8;
+}
+
+.label-name {
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    pointer-events: none;
+    transition: 0.3s;
+    color: #777;
+}
+
+.form input:focus + .label-name .content-name,
+.form input:not(:placeholder-shown) + .label-name .content-name {
+    transform: translateY(-20px);
+    font-size: 12px;
+    color: #3498db;
+}
+
+.styled-btn {
+    padding: 12px 20px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.styled-btn:hover {
+    background: #2c80b4;
+}
+
+#content-box {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;   /* jeden pod drugim */
+    align-items: center;      /* wycentrowane */
+    gap: 20px;
+    padding: 20px;
+}
+.holder {
+    background: rgb(106, 163, 199);
+    width: 90%;
+    max-width: 500px;
+    min-height: 180px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    overflow-y: auto; 
+    line-height: 2;
+}
+#current-weather,
+.holder {
+    display: none; /* hide*/
+}
+.current-weather {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 25px;
+    padding: 20px;
+    background: rgb(147, 190, 224);
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.current-weather img {
+    width: 70px;
+    height: 70px;
+}
+
+.current-weather h2 {
+    margin: 0;
+    padding: 0;
+}
